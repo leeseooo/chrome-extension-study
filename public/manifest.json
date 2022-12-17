@@ -1,0 +1,22 @@
+{
+  "name": "익스텐션 공부",
+  "description": "익텐공",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon16.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["activeTab", "tabs", "storage", "scripting"]
+}
