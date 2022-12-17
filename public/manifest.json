@@ -6,9 +6,7 @@
   "icons": {
     "16": "icon16.png"
   },
-  "action": {
-    "default_popup": "index.html"
-  },
+  "action": {},
   "background": {
     "service_worker": "background.js"
   },
@@ -18,5 +16,12 @@
       "js": ["content.js"]
     }
   ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      }
+    }
+  },
   "permissions": ["activeTab", "tabs", "storage", "scripting"]
 }
