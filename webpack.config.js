@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     background: path.resolve(__dirname, "src", "background.ts"),
     content: path.resolve(__dirname, "src", "content.ts"),
-    index: path.resolve(__dirname, "src", "index.tsx"),
+    popup: path.resolve(__dirname, "src", "pages", "Popup", "index.tsx"),
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -48,8 +48,8 @@ module.exports = {
       patterns: [{ from: ".", to: ".", context: "public" }],
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
+      template: "./src/pages/Popup/index.html",
+      filename: "popup.html",
       cache: false,
     }),
   ],
